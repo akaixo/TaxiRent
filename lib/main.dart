@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.black45,
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                 width: 260,
@@ -100,14 +100,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.blue,
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                 width: 140,
                 alignment: Alignment.bottomCenter,
                 child: Text(
                   "Login",
-                  style: TextStyle(color: Colors.white, fontSize: 27, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 27,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -119,14 +123,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.blue,
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                 width: 140,
                 alignment: Alignment.bottomCenter,
                 child: Text(
                   "Sign Up",
-                  style: TextStyle(color: Colors.white, fontSize: 27, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 27,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
