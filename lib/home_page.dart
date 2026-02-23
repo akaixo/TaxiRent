@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text(
           'TaxiRent',
           style: TextStyle(
-            fontSize: 42,
+            fontSize: 44,
             fontFamily: 'CevicheOne-Regular',
             color: Colors.white,
           ),
@@ -28,7 +28,6 @@ class _HomePageState extends State<HomePage> {
           child: const Icon(Icons.arrow_back, color: Colors.white),
         ),
       ),
-
       body: ListView(
         children: [
           Stack(
@@ -39,8 +38,8 @@ class _HomePageState extends State<HomePage> {
                 fit: BoxFit.cover,
               ),
               const Positioned(
-                top: 20,
-                left: 20,
+                top: 15,
+                left: 10,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -65,18 +64,26 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          const SizedBox(height: 10),
-          Positioned(
-            left: 40,
-            child: Text("Eco class",
-                style: TextStyle(
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Economy class",
+                  style: TextStyle(
                     color: Colors.black,
                     fontSize: 33,
-                    fontWeight: FontWeight.bold)
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 10),
-          SizedBox(height: 220,
+          const SizedBox(height: 20),
+          SizedBox(
+            height: 180,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -148,11 +155,200 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Comfort class",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 33,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 180,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/hyundai_sonata.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/kia_k5.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/toyota_corolla.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/chevrolet_malibu.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "Business class",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 33,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 180,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/toyota_camry.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/hyundai_elantra.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/lexus_es.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 250,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/cars/bmw_5.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
 
                 const SizedBox(width: 16),
               ],
             ),
           ),
+
           const SizedBox(height: 40),
         ],
       ),
