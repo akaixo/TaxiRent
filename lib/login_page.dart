@@ -20,19 +20,14 @@ class _LoginPageState extends State<LoginPage> {
               fit: BoxFit.cover,
             ),
           ),
-
           Positioned(
             top: 60,
             left: 20,
             child: IconButton(
-              icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
-                  size: 28),
+              icon: const Icon(Icons.arrow_back, color: Colors.black, size: 28),
               onPressed: () => Navigator.pop(context),
             ),
           ),
-
           Positioned(
             top: 150,
             left: 0,
@@ -48,7 +43,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-
           Positioned(
             bottom: 320,
             left: 20,
@@ -70,6 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   TextField(
+                    keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
                       hintText: 'login',
                       prefixIcon: const Icon(Icons.person_outline),
@@ -83,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 16),
                   TextField(
+                    keyboardType: TextInputType.phone,
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'password',
@@ -110,9 +106,10 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text(
                         "LOGIN",
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

@@ -1,3 +1,6 @@
+import 'package:autorent/honda_fit_page.dart';
+import 'package:autorent/kia_morning_page.dart';
+import 'package:autorent/login_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,6 +14,32 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.grey[900],
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_border),
+            activeIcon: Icon(Icons.favorite),
+            label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            activeIcon: Icon(Icons.person),
+            label: 'Cabinet',
+          ),
+        ],
+      ),
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
@@ -25,7 +54,10 @@ class _HomePageState extends State<HomePage> {
           onTap: () {
             Navigator.pop(context);
           },
-          child: const Icon(Icons.arrow_back, color: Colors.white),
+          child: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+          ),
         ),
       ),
       body: ListView(
@@ -68,12 +100,12 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Economy class",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 33,
                     fontWeight: FontWeight.bold,
                   ),
@@ -89,12 +121,21 @@ class _HomePageState extends State<HomePage> {
               children: [
                 const SizedBox(width: 16),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return HondaFitPage();
+                        },
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -106,12 +147,21 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(width: 16),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return KiaMorningPage();
+                        },
+                      ),
+                    );
+                  },
                   child: Container(
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -128,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -145,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -162,12 +212,12 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Comfort class",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 33,
                     fontWeight: FontWeight.bold,
                   ),
@@ -175,7 +225,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           SizedBox(
             height: 180,
             child: ListView(
@@ -188,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -205,7 +255,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -222,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -239,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -256,12 +306,12 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Business class",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontSize: 33,
                     fontWeight: FontWeight.bold,
                   ),
@@ -269,7 +319,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           SizedBox(
             height: 180,
             child: ListView(
@@ -282,7 +332,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -299,11 +349,11 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
-                        'assets/images/cars/hyundai_elantra.png',
+                        'assets/images/cars/mercedes_e_class.png',
                         fit: BoxFit.contain,
                       ),
                     ),
@@ -316,7 +366,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -333,7 +383,7 @@ class _HomePageState extends State<HomePage> {
                     width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.grey,
+                      color: Colors.yellow[700],
                     ),
                     child: Center(
                       child: Image.asset(
@@ -343,13 +393,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-
-                const SizedBox(width: 16),
               ],
             ),
           ),
-
-          const SizedBox(height: 40),
         ],
       ),
     );
